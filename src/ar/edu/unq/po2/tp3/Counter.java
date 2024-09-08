@@ -50,11 +50,31 @@ public class Counter {
 		return contador;
 	}
 	
-	public int getNumeroConMasPares(ArrayList<Integer>listaDeNumeros) {
-		int conMasPares = listaDeNumeros.getFirst();
-		
-		return 0;
-		
+	public int getNumeroConMasPares() {
+		int conMasPares = numeros.getFirst();
+		for(int n:numeros) {
+			while(n!=0) {
+				if(this.cantParesDe(n) > this.cantParesDe(conMasPares) ) {
+					conMasPares = n;
+				}
+			}
+		}
+		return conMasPares;
+	}
+	
+	public int desarmaUndigito(int x) {
+		return x/10 ;
+	}
+	
+	public int cantParesDe(int x) {
+		int paresHastaAhora = 0;
+		while(x!=0) {
+			if(x%10==0) {
+				paresHastaAhora = paresHastaAhora + 1;
+			}
+			this.desarmaUndigito(x);
+		}
+		return paresHastaAhora ;
 	}
 	
 }

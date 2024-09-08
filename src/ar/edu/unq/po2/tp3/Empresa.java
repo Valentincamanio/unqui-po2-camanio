@@ -3,10 +3,10 @@ package ar.edu.unq.po2.tp3;
 
 public class Empresa {
 	private String nombre;
-	private String cuit;
+	private int cuit;
 	private Empleado empleados;
 	
-	public Empresa (String nombre , String cuit) {
+	public Empresa (String nombre , int cuit) {
 		this.nombre= nombre;
 		this.cuit = cuit;
 		/*
@@ -21,24 +21,24 @@ public class Empresa {
 		return this.nombre;
 	}
 	
-	public String getCuit() {
-		return this.cuit;
+	public int getCuit() {
+		return cuit;
 	}
 	
 	public Empleado getEmpleados() {
-		return this.empleados;
+		return empleados;
 	}
 	
 	public int valorTotalSueldosNetos() {
-		return this.empleados.getSueldoNeto();
+		return empleados.getSueldoNeto();
 	}
 	
 	public int valorTotalDeSueldosBrutos() {
-		return this.empleados.getSueldoBruto();
+		return empleados.getSueldoBruto();
 	}
 	
 	public int valorTotalDeRetenciones() {
-		return this.empleados.getRetenciones();
+		return empleados.getRetenciones();
 	}
 	
 	public void liquidarSueldos() {

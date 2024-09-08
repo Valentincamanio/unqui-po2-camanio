@@ -2,7 +2,7 @@ package ar.edu.unq.po2.tp3;
 
 import java.sql.Date;
 
-public class EmpleadoTemporal extends Empleado {
+public abstract class EmpleadoTemporal extends Empleado {
 	
 	private String fechaFin;
 	private int cantHorasExtras;
@@ -22,32 +22,29 @@ public class EmpleadoTemporal extends Empleado {
 	}
 	
 	public int getDescuentoPorObraSocial() {
-		return (this.getSueldoBruto()/10) + 25 ;// se le suman si tiene mas de 50 años 
+		int descTotal = this.getSueldoBruto() /10;
+		if (this.edad() > 50) {
+			descTotal += 25;
+		}
+		return descTotal ;
 	}
 	
 	public int getCobroHorasExtras() {
-		return 40 * this.getCantHorasExtras();
+		return 40 * cantHorasExtras;
 	}
 
 	public int getDescuentoPorAporteJubilatorio() {
-		return (this.getSueldoBruto() / 10) + (5 * this.getCantHorasExtras());
+		return (this.getSueldoBruto() / 10) + (5 * cantHorasExtras);
 	}
 	
 	public String getFechaFin() {
 		return fechaFin;
 	}
 
-	public void setFechaFin(String fechaFin) {
-		this.fechaFin = fechaFin;
-	}
-
 	public int getCantHorasExtras() {
 		return cantHorasExtras;
 	}
 
-	public void setCantHorasExtras(int cantHorasExtras) {
-		this.cantHorasExtras = cantHorasExtras;
-	}
 	
 	
 }

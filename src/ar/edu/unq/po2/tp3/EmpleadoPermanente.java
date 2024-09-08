@@ -2,7 +2,7 @@ package ar.edu.unq.po2.tp3;
 
 import java.sql.Date;
 
-public class EmpleadoPermanente extends Empleado {
+public abstract class EmpleadoPermanente extends Empleado {
 	
 	private int cantidadDeHijos;
 	private int antiguedadEnEmpresa;
@@ -53,8 +53,13 @@ public class EmpleadoPermanente extends Empleado {
 		return (this.getSueldoBruto()) / 15;
 	}
 	
-	
-	
+	public int getasignacionPorHijo() {
+		return 150;
+	}
+
+	public int getasignacionPorConyuge() {
+		return  100;
+	}
 }
 	
 	
