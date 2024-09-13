@@ -1,21 +1,19 @@
 package ar.edu.unq.po2.tp3;
 
+import java.util.List;
 
+import java.util.ArrayList;
+;
 public class Empresa {
 	private String nombre;
 	private int cuit;
-	private Empleado empleados;
+	private List <Empleado> empleados;
 	
-	public Empresa (String nombre , int cuit) {
-		this.nombre= nombre;
-		this.cuit = cuit;
-		/*
-		 * 
-		List <Empleado> empleados= new Arraylist <Empleado>();
-		for() {
-			this.empleados.add
-		}import java.util.List;
-		 */
+	
+	public Empresa (String nombreE , int cuitE,ArrayList<Empleado> emply) {
+		nombre= nombreE;
+		cuit = cuitE;
+		empleados=emply;
 	}
 	public String getNombre() {
 		return this.nombre;
@@ -26,19 +24,31 @@ public class Empresa {
 	}
 	
 	public Empleado getEmpleados() {
-		return empleados;
+		return (Empleado) empleados;
 	}
 	
 	public int valorTotalSueldosNetos() {
-		return empleados.getSueldoNeto();
+		int valorT=0;
+		for(Empleado emply:empleados) {
+			valorT+=emply.getSueldoNeto();
+		}
+		return valorT;
 	}
 	
 	public int valorTotalDeSueldosBrutos() {
-		return empleados.getSueldoBruto();
+		int valorT=0;
+		for(Empleado emply:empleados) {
+			valorT+=emply.getSueldoBruto();
+		}
+		return valorT;
 	}
 	
 	public int valorTotalDeRetenciones() {
-		return empleados.getRetenciones();
+		int valorT=0;
+		for(Empleado emply:empleados) {
+			valorT+=emply.getRetenciones();
+		}
+		return valorT;
 	}
 	
 	public void liquidarSueldos() {

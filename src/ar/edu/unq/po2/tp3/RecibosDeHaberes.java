@@ -1,12 +1,12 @@
 package ar.edu.unq.po2.tp3;
 
-import java.util.Date;
+// import java.util.Date;
 
 public class RecibosDeHaberes{
 	
 	private String nombreDelEmpleado; 
 	private String direccionDelEmpleado; 
-	private Date fechaDeEmision;
+	// private Date fechaDeEmision;
 	private int sueldoBrutoDelEmpleado;
 	private int sueldoNetoDelEmpleado;
 

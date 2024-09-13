@@ -11,7 +11,7 @@ public class EmpresaTestCase {
 	@BeforeEach
 	
 	void setUp() throws Exception {
-		this.Samsung = new Empresa ("Samsung",222);
+		// this.Samsung = new Empresa ("Samsung",222, ArrayList<>valentin);
 		// this.valentin= new Empleado ("Valentin",2951,"midireccion");
 		// Empleado empl = new EmpleadoPermanente();
 		

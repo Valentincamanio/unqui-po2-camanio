@@ -3,11 +3,11 @@ import java.util.Date;
 
 public abstract class Empleado {
 	
-	protected String nombre;
-	protected String direccion;
-	protected String estCivil;
-	protected Date fechaDeNacimiento;
-	protected int sueldoBasico;
+	private String nombre;
+	private String direccion;
+	private String estCivil;
+	private Date fechaDeNacimiento;
+	private int sueldoBasico;
 	
 	protected Empleado() {
 	}
