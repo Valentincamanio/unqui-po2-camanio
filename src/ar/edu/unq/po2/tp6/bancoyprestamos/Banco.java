@@ -8,6 +8,9 @@ public class Banco {
 	List<Cliente> clientes= new ArrayList <Cliente>();
 	List<SolicitudDeCredito> solicitudes= new ArrayList <SolicitudDeCredito>();
 	
+	public Banco() {
+	}
+	
 	public void recibeSolicitudDeCreditoPersonalDe(Cliente cliente, int monto, int cantMeses) {
 		// Prop: Registra en la lista el nuevo credito personal
 		SolicitudCreditoPersonal solCreditoPersonal = new SolicitudCreditoPersonal (cliente, monto, cantMeses);
@@ -26,5 +29,7 @@ public class Banco {
 		clientes.add(clien);
 	}
 	
-	
+	public int getCantClientes() {
+		return clientes.size();
+	}
 }

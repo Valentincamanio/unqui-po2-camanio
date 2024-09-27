@@ -8,18 +8,14 @@ public class Cliente {
 	Banco banco;
 	private int sueldoMensual;
 	
-	public Cliente(String nombre, String apellido, int edad, int sueldoMensual) {
+	public Cliente(String nombre, String apellido, int edad, int sueldoMensual,Banco banco) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.edad = edad;
 		this.sueldoMensual = sueldoMensual;
-	}
-	/***
-	 * private void loguearAlUsuario() {
+		this.banco= banco;
 		banco.recibeNuevoCliente(this);
 	}
-	 * 
-	 */
 
 	public int getSueldoMensual() {
 		return sueldoMensual;

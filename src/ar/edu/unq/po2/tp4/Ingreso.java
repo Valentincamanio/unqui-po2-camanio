@@ -1,7 +1,6 @@
 package ar.edu.unq.po2.tp4;
 
 import java.time.Month;
-import java.util.Date;
 
 public abstract class Ingreso {
 	
